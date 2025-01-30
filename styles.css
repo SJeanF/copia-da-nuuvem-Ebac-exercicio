@@ -26,7 +26,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .left-head img {
@@ -46,17 +46,12 @@ header {
     color: white;
 }
 
-.right-head {
-    width: 35%;
-}
-
 .main {
     background-color: #091f4c;
 }
 
 section {
-    padding-top: 76px;
-    padding-bottom: 76px;
+    padding: 76px 0;
 }
 
 #login {
@@ -94,6 +89,20 @@ section {
 .destaque-carousel img {
     height: 100%;
     width: 100%;
+}
+
+.sub-destaque-container-top {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-destaque-container-bottom {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 100%;
 }
 
 .sub-destaque {
@@ -138,6 +147,7 @@ section {
 
 .preco button {
     font-size: 1.5em;
+    font-weight: bold;
     display: flex;
     align-items: center;
     padding: 4px;
@@ -157,3 +167,34 @@ section {
     color: white;
 }
 
+@media screen and (max-width:576px) {
+    section {
+        padding: 20px 0;
+    }
+    
+    .item-pequeno {
+        width: 100%;
+        height: 200px;
+    }
+
+    .item-pequeno h3 {
+        font-size: 1em;
+    }
+
+    .item-pequeno p {
+        font-size: .6em;
+    }
+
+    .item-pequeno .preco {
+        font-size: .5em;
+    }
+
+    .item-pequeno .sub-destaque {
+        font-size: 16px;
+    }
+
+    .item-pequeno .sub-destaque {
+        width: 100%;
+        height: 100%;
+    }
+}

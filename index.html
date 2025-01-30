@@ -23,43 +23,30 @@
                 <button data-bs-toggle="collapse" data-bs-target="#barra-navegacao" class="navbar-toggler custom-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="right-head d-flex justify-content-space-between">
-                    <nav id="barra-navegacao" class="collapse navbar-collapse">
-                        <ul class="nav nav-pills navbar-nav text-center">
-                            <li class="nav-item"><a class="nav-link active" href="#ofertas">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                        </ul>
-                    </nav>
-                    <button id="login" type="button">Login</button>
-                </div>
+                <nav id="barra-navegacao" class="collapse navbar-collapse justify-content-end">
+                    <ul class="nav nav-pills navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link active" href="#ofertas">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                        <button id="login" type="button">Login</button>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
     <div class="main" data-bs-spy="scroll" data-bs-target="#barra-navegacao">
         <section id="ofertas">
-            <div id="destaques" class="carousel-slide" data-bs-ride="carousel">
+            <div id="destaques" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="container">
-                        <div class="grid carousel-item active">
-                            <div class="destaque-carousel">
-                                <img src="https://fakeimg.pl/1280x720" alt="">
-                                <div class="legenda-produto">
-                                    <h3>Promoção Dark Souls</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
-                                    <div class="preco">
-                                        <span class="desconto">-69%</span>
-                                        <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                        <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
+                        <div class="carousel-item active item-grande primeiro">
+                            <div class="grid layout-grande">
+                                <div class="destaque-carousel item-pequeno primeiro">
+                                    <img src="https://fakeimg.pl/1280x720" alt="">
                                     <div class="legenda-produto">
                                         <h3>Promoção Dark Souls</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
                                             <h5 class="dinheiros no-margin">R$ 317.50</h5>
@@ -67,79 +54,41 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-end">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
-                                    <div class="legenda-produto">
-                                        <h3>Promoção Dark Souls</h3>
-                                        <div class="preco">
-                                            <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                            <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                <div class="sub-destaque-container-top item-pequeno top">
+                                    <div class="sub-destaque">
+                                        <img src="https://fakeimg.pl/400x400" alt="">
+                                        <div class="legenda-produto">
+                                            <h3>Promoção Dark Souls</h3>
+                                            <div class="preco">
+                                                <span class="desconto">-69%</span>
+                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="grid carousel-item">
-                            <div class="destaque-carousel">
-                                <img src="https://fakeimg.pl/1280x720" alt="">
-                                <div class="legenda-produto">
-                                    <h3>Promoção Dark Souls</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
-                                    <div class="preco">
-                                        <span class="desconto">-69%</span>
-                                        <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                        <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
-                                    <div class="legenda-produto">
-                                        <h3>Promoção Dark Souls</h3>
-                                        <div class="preco">
-                                            <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                            <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-end">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
-                                    <div class="legenda-produto">
-                                        <h3>Promoção Dark Souls</h3>
-                                        <div class="preco">
-                                            <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                            <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                <div class="sub-destaque-container-bottom item-pequeno bottom">
+                                    <div class="sub-destaque">
+                                        <img src="https://fakeimg.pl/320x180" alt="">
+                                        <div class="legenda-produto">
+                                            <h3>Promoção Dark Souls</h3>
+                                            <div class="preco">
+                                                <span class="desconto">-69%</span>
+                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid carousel-item">
-                            <div class="destaque-carousel">
-                                <img src="https://fakeimg.pl/1280x720" alt="">
-                                <div class="legenda-produto">
-                                    <h3>Promoção Dark Souls</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
-                                    <div class="preco">
-                                        <span class="desconto">-69%</span>
-                                        <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                        <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
+                        <div class="carousel-item item-grande">
+                            <div class="grid layout-grande">
+                                <div class="destaque-carousel item-pequeno">
+                                    <img src="https://fakeimg.pl/1280x720" alt="">
                                     <div class="legenda-produto">
                                         <h3>Promoção Dark Souls</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
                                             <h5 class="dinheiros no-margin">R$ 317.50</h5>
@@ -147,25 +96,38 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-end">
-                                <div class="sub-destaque">
-                                    <img src="https://fakeimg.pl/320x180" alt="">
-                                    <div class="legenda-produto">
-                                        <h3>Promoção Dark Souls</h3>
-                                        <div class="preco">
-                                            <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
-                                            <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                <div class="sub-destaque-container-top item-pequeno top">
+                                    <div class="sub-destaque">
+                                        <img src="https://fakeimg.pl/400x400" alt="">
+                                        <div class="legenda-produto">
+                                            <h3>Promoção Dark Souls</h3>
+                                            <div class="preco">
+                                                <span class="desconto">-69%</span>
+                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-destaque-container-bottom item-pequeno bottom">
+                                    <div class="sub-destaque">
+                                        <img src="https://fakeimg.pl/320x180" alt="">
+                                        <div class="legenda-produto">
+                                            <h3>Promoção Dark Souls</h3>
+                                            <div class="preco">
+                                                <span class="desconto">-69%</span>
+                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button data-bs-slide="" class="carousel-control-prev" type="button">
+                        <button data-bs-target="#destaques" data-bs-slide="prev" class="carousel-control-prev" type="button">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button">
+                        <button data-bs-target="#destaques" data-bs-slide="next" class="carousel-control-next" type="button">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
@@ -173,6 +135,8 @@
             </div>
         </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
