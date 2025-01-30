@@ -1,0 +1,159 @@
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+header,
+.navbar-nav .nav-link a,
+#login,
+.preco h5,
+.preco button{
+    font-family: "Work Sans", serif;
+}
+
+.destaque-carousel h3 {
+    font-family: "Poppins", serif;
+}
+
+header {
+    background-color: #07183b;
+    color: #cdd5e6;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.left-head img {
+    height: 60px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(205, 213, 230,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+    border: none;
+}
+.navbar-nav .nav-link {
+    color: #cdd5e6;
+}
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.right-head {
+    width: 35%;
+}
+
+.main {
+    background-color: #091f4c;
+}
+
+section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+#login {
+    background: linear-gradient(to right, #26fe95, #5eff6c);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+#login:hover {
+    background-color: #0036a3;
+    border-color: #0036a3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    height: 500px;
+}
+
+.carousel-item img {
+    border-radius: 16px;
+}
+
+.destaque-carousel {
+    grid-row: 1 / -1;
+    height: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.destaque-carousel img {
+    height: 100%;
+    width: 100%;
+}
+
+.sub-destaque {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    font-size: 9px;
+}
+
+.sub-destaque img{
+    height: 100%;
+    width: 100%;
+}
+
+.legenda-produto{
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.legenda-produto h3 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.preco {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    font-size: 1em;
+}
+
+.preco span,
+.preco h5 {
+    font-size: 1.5em;
+}
+
+.sub-destaque .preco button i {
+    font-size: 1.5em;
+}
+
+.preco button {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(to right,#26fe95, #5eff6c);
+}
+
+.preco span {
+    background: linear-gradient(to right, #ff2474, #f26b0b);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.preco h5,
+.preco span {
+    color: white;
+}
+
