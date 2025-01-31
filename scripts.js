@@ -16,7 +16,8 @@ function layoutGridChanger () {
         $('.item-pequeno').removeClass('sub-destaque-container-top')
         $('.item-pequeno').removeClass('sub-destaque-container-bottom')
         $('.item-pequeno').addClass('carousel-item');
-        $('.item-pequeno.primeiro').addClass('active')
+        $('.item-pequeno.primeiro').addClass('active');
+        $('.apagavel').removeClass('d-none')
     } else {
         $('.item-pequeno').removeClass('carousel-item');
         $('.item-grande').addClass('carousel-item');
@@ -25,5 +26,6 @@ function layoutGridChanger () {
         $('.item-pequeno.primeiro').removeClass('active')
         $('.item-pequeno.top').addClass('sub-destaque-container-top')
         $('.item-pequeno.bottom').addClass('sub-destaque-container-bottom')
+        $('.apagavel').addClass('d-none')
     }
 }
