@@ -12,13 +12,15 @@ header,
 .navbar-nav .nav-link a,
 #login,
 .preco h5,
-.preco button{
+.preco button,
+.container-modal{
     font-family: "Work Sans", serif;
 }
 
 .destaque-carousel h3 {
     font-family: "Poppins", serif;
 }
+
 
 header {
     background-color: #07183b;
@@ -29,8 +31,22 @@ header {
     z-index: 2;
 }
 
+header .container {
+    position: relative;
+}
+
+.left-head {
+    width: 50%;
+}
+
 .left-head img {
     height: 60px;
+}
+
+.right-head {
+    display: flex;
+    align-items: center;
+    width: 50%;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -60,11 +76,114 @@ section {
     border: none;
     padding: 10px;
     color: white;
+
 }
 
-#login:hover {
-    background-color: #0036a3;
-    border-color: #0036a3;
+.perfil-position {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transform: translateY(5px);
+}
+
+.perfil img {
+    max-height: 44px;
+    height: 100%;
+    width: fit-content;
+    background-color: white;
+    border: solid 2px white;
+    border-radius: 100%;
+}
+
+.container-modal {
+    height: 350px;
+    margin-top: calc((100vh - 350px) / 2);
+    margin-bottom: calc((100vh - 350px) / 2);
+}
+
+.modal-content {
+    border-radius: 32px;
+    background-color: #07183b;
+}
+
+.modal-body, .modal-header {
+    background-color: #07183b;
+    border-color: #091f4c;
+    color: white;
+}
+
+.modal-header {
+    border-start-start-radius: 32px;
+    border-start-end-radius: 32px;
+}
+
+.modal-body {
+    border-end-end-radius: 32px;
+    border-end-start-radius: 32px;
+}
+
+#modal-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#modal-form > a {
+    align-self: flex-end;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: #cdd5e6;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#entrar {
+    width: 100%;
+    border: none;
+    background: linear-gradient(to right, #26fe95, #5eff6c);
+    color: white;
+    height: 36px;
+    border-radius: 4px;
+}
+
+.carrinho-container {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    z-index: 2;
+}
+
+#carrinho {
+    border: none;
+    background: linear-gradient(to right, #83a4e7, #2852a5);
+    color: #141516;
+    padding: 4px 16px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#carrinho:hover {
+    color: white;
 }
 
 .grid {
@@ -196,5 +315,12 @@ section {
     .item-pequeno .sub-destaque {
         width: 100%;
         height: 100%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .perfil-position {
+        right: 70px;
+        transform: translate(0%, -50%);
     }
 }

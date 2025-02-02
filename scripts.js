@@ -5,7 +5,17 @@ $(document).ready(function() {
     $(window).on('resize', function() {
         layoutGridChanger()
     })
+
+    $('#modal-form').submit(function(e) {
+        e.preventDefault()
+        entrar()
+    })
+
+    $('.toggle-password-view').on('click', function() {
+        passwordViewToggler(this)
+    })
 })
+
 
 function layoutGridChanger () {
     const larguraTela = $(window).width()
@@ -28,4 +38,35 @@ function layoutGridChanger () {
         $('.item-pequeno.bottom').addClass('sub-destaque-container-bottom')
         $('.apagavel').addClass('d-none')
     }
+}
+
+function passwordViewToggler(onde) {
+    const elemento = $(onde)
+    const input = elemento.parent().find('input')
+    const tipo = input.attr('type') === 'password' ? 'text' : 'password'
+    
+    if (elemento.hasClass('fa-eye')) {
+    elemento.removeClass('fa-eye')
+    elemento.addClass('fa-eye-slash')
+    input.attr('type', tipo)
+    } else {
+    elemento.removeClass('fa-eye-slash')
+    elemento.addClass('fa-eye')
+    input.attr('type', tipo)
+    }
+}
+
+function entrar () {
+    let usuariotext = $('#usuario').val()
+
+    usuariotext = usuariotext.length > 6 ? usuariotext.substring(0, 6) + '...' : usuariotext
+
+    let modalElement = document.querySelector('.modal')
+    let modal = bootstrap.Modal.getInstance(modalElement)
+    modal.hide()
+
+    $('#login').css('display', 'none')
+    const perfil = $('.perfil')
+    perfil.css('display', 'flex')
+    perfil.find('p').text(usuariotext)
 }

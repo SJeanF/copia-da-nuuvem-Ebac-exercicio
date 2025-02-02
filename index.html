@@ -29,12 +29,48 @@
                         <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                        <button id="login" type="button">Login</button>
                     </ul>
                 </nav>
+                <div class="perfil-position">
+                    <button id="login" data-bs-toggle="modal" data-bs-target="#modal-login" type="button">Login</button>
+                    <div class="perfil">
+                        <img src="https://cdn-icons-png.flaticon.com/512/711/711769.png" alt="Sua foto de perfil">
+                        <p class="">123456789</p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <div id="modal-login" class="modal" data-bs-backdrop="static">
+        <div class="modal-dialog container-modal">
+            <div class="modal-content h-100">
+                <div class="modal-header justify-content-center">
+                    <h2 class="no-margin">Bem Vindo de Volta</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="modal-form">
+                        <input id="usuario" class="form-control" type="text" placeholder="Usuario" required>
+                        <div class="password-container">
+                            <input id="senha" class="form-control" type="password" placeholder="Senha" required>
+                            <i class="fa-solid fa-eye toggle-password-view"></i>
+                        </div>
+                        <a href="#">esqueci minha senha</a>
+                        <div class="form-check">
+                            <label class="form-check-label" for="termos">Li e aceito os <a href="#">Termos de Uso e Politica de Privacidade</a></label>
+                            <input class="form-check-input" id="termos" type="checkbox" required>
+                        </div>
+                        <button id="entrar" type="submit">Entrar</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carrinho-container">
+        <button id="carrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+    </div>
     <div class="main" data-bs-spy="scroll" data-bs-target="#barra-navegacao">
         <section id="ofertas">
             <div id="destaques" class="carousel slide carousel-fade" data-bs-ride="carousel">
