@@ -1,5 +1,5 @@
+let subtotal = 0 
 $(document).ready(function() {
-    
     
     layoutGridChanger()
     $(window).on('resize', function() {
@@ -14,6 +14,15 @@ $(document).ready(function() {
     $('.toggle-password-view').on('click', function() {
         passwordViewToggler(this)
     })
+
+    $('.carrinho-container').on('show.bs.collapse hidden.bs.collapse', function(e) {
+        sumirComBotaoCarrinho(e)
+    })
+
+    $('.adicionar-carrinho').on('click', function () {
+        adicionarAoCarrinho($(this))
+    })
+
 })
 
 
@@ -69,4 +78,25 @@ function entrar () {
     const perfil = $('.perfil')
     perfil.css('display', 'flex')
     perfil.find('p').text(usuariotext)
+}
+
+function sumirComBotaoCarrinho (evento) {
+    const display = evento.type === 'show' ? 'none' : 'block'
+    $('#carrinho-btn').css('display', display)
+}
+
+function adicionarAoCarrinho (btnItem) {
+    const item = btnItem.parent().parent().parent()
+    const imagem = item.find('img').attr('src')
+    const precoItemString = item.find('.dinheiros span').text()
+    const moldeNovoItem = $(`<li class="produto"><img src="${imagem}" alt=""><h6>R$ ${precoItemString.replace('.', ',')}</h6><button><i class="fas fa-trash"></i></button></li>`)
+    
+    moldeNovoItem.appendTo($('.produtos'))
+    atualizaSubTotal(parseFloat(precoItemString))
+}
+
+function atualizaSubTotal (valor) {
+    subtotal += valor
+
+    $('#sub-total span').text(subtotal.toFixed(2).replace('.', ','))
 }

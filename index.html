@@ -66,10 +66,21 @@
             </div>
         </div>
     </div>
-    <div class="carrinho-container">
-        <button id="carrinho">
+    <div class="carrinho-container ">
+        <button data-bs-toggle="collapse" data-bs-target="#carrinho" id="carrinho-btn">
             <i class="fa-solid fa-cart-shopping"></i>
         </button>
+        <div id="carrinho" class="collapse collapse-horizontal">
+            <div class="collapse-content">
+                <button id="fecha-carrinho" data-bs-toggle="collapse" data-bs-target="#carrinho"><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i></button>
+                <div class="carrinho-menu">
+                    <h4>Sub Total</h4>
+                    <h5 id="sub-total">R$ <span>0,00</span></h5>
+                    <ul class="produtos p-0 no-margin">
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="main" data-bs-spy="scroll" data-bs-target="#barra-navegacao">
         <section id="ofertas">
@@ -85,7 +96,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                            <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                             <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                         </div>
                                     </div>
@@ -97,7 +108,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -110,7 +121,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -127,7 +138,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                            <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                             <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                         </div>
                                     </div>
@@ -139,7 +150,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -152,7 +163,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -169,7 +180,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
-                                            <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                            <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                             <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                         </div>
                                     </div>
@@ -181,7 +192,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -194,7 +205,7 @@
                                             <h3>Promoção Dark Souls</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
-                                                <h5 class="dinheiros no-margin">R$ 317.50</h5>
+                                                <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
                                                 <button class="adicionar-carrinho"><i class="material-icons">add_shopping_cart</i> Comprar</button>
                                             </div>
                                         </div>
@@ -208,7 +219,7 @@
                         <button data-bs-target="#destaques" data-bs-slide="next" class="carousel-control-next" type="button">
                             <span class="carousel-control-next-icon"></span>
                         </button>
-                        <div class="carousel-indicators">
+                        <div class="carousel-indicators indicador-carousel">
                             <button data-bs-slide-to="0" data-bs-target="#destaques" class="active" type="button"></button>
                             <button data-bs-slide-to="1" data-bs-target="#destaques" type="button"></button>
                             <button data-bs-slide-to="2" data-bs-target="#destaques" type="button"></button>
