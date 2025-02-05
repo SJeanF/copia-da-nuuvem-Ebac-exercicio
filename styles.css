@@ -13,7 +13,9 @@ header,
 #login,
 .preco h5,
 .preco button,
-.container-modal{
+.container-modal,
+.gift-option-button, 
+.gift-option-button input{
     font-family: "Work Sans", serif;
 }
 
@@ -28,7 +30,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 header .container {
@@ -76,7 +78,6 @@ section {
     border: none;
     padding: 10px;
     color: white;
-
 }
 
 .perfil-position {
@@ -186,16 +187,14 @@ section {
     color: white;
 }
 
-.collapse-horizontal {
+#carrinho {
     width: 118px;
     overflow: hidden;
-    height: 75vh;
 }
 
 .collapse-content {
     width: 100%;
     height: 100%;
-    border-left: 8px solid #2852a5;
 }
 
 .collapse-content > button {
@@ -203,6 +202,7 @@ section {
     border: none;
     background: linear-gradient(to right, #83a4e7, #2852a5);
     width: 118px;
+    border-top-left-radius: 8px;
 }
 
 .collapse-content > button:hover {
@@ -216,6 +216,8 @@ section {
     align-items: center;
     height: 100%;
     width: 118px;
+    padding-left: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .carrinho-menu h4 {
@@ -232,7 +234,8 @@ section {
     align-items: center;
     height: 100%;
     overflow-y: scroll;
-    border-bottom: 30px solid transparent;
+    border-bottom: 20px solid transparent;
+    height: 65vh;
 }
 
 .produtos::-webkit-scrollbar {
@@ -353,7 +356,7 @@ section {
     font-size: 1.5em;
 }
 
-.preco button {
+.preco button, .gift-carrinho {
     font-size: 1.5em;
     font-weight: bold;
     display: flex;
@@ -377,6 +380,147 @@ section {
 
 .indicador-carousel {
     bottom: -20px;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.card-header.item {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: linear-gradient(to right, #ff2474, #f26b0b);
+    text-align: center;
+    font-size: 14px;
+}
+
+.card-header.gift {
+    border: none;
+}
+
+.card-body.item {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0;
+    padding-bottom: 12px;
+}
+
+.card-body.item h3 {
+    font-size: 3em;
+}
+
+.item {
+    width: 70%;
+    background-color: #07183b;
+    color: white;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item .legenda-produto {
+    font-size: 8px;
+    position: static;
+    margin-left: 20px;
+}   
+
+.desconto-limitado {
+    font-size: 18px;
+    background: linear-gradient(to right, #ff2474, #f26b0b);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.desconto-limitado h5 {
+    display: flex;
+    align-items: center;
+}
+
+.card.gift {
+    display: flex;
+    flex-direction: row;
+    background-color: #cdd5e6;
+}
+
+.card.gift img {
+    width: 200px;
+    height: 100px;
+}
+
+.card.gift .legenda-produto {
+    position: static;
+}
+
+.card.gift .legenda-produto h3 {
+    font-size: 1.5em;
+}
+
+.modal-content.gift {
+    height: 100%;
+}
+
+.gift-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.gift-form button {
+    align-self: end;
+}
+
+.gift-option-button {
+    border: 5px solid #14b822dc;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 32px;
+    background-color: #c3c7cf;
+    margin: 2px;
+    width: 49%;
+    font-weight: 600;
+    color: white;
+    transition: background-color 0.3s ease-in-out, opacity 0.4s;
+    min-height: 75px;
+}
+
+.gift-active-button {
+    background-color: #14b821;
+    transition: background-color 0.3s ease-in-out, opacity 0.4s;
+}
+
+.gift-option-button:hover {
+    border: 5px solid #14ff2788;
+}
+
+.gift-active-button:hover {
+    border: 5px solid #14b821
+}
+
+.gift-option-button input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px inset #063b0b;
+    width: 200px;
+    display: none;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+
+.gift-option-button input::-webkit-outer-spin-button,
+.gift-option-button input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 @media screen and (max-width:576px) {
@@ -409,11 +553,19 @@ section {
         width: 100%;
         height: 100%;
     }
+
+    .item {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:992px) {
     .perfil-position {
         right: 70px;
         transform: translate(0%, -50%);
+    }
+
+    .item {
+        width: 100%;
     }
 }
