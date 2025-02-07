@@ -29,28 +29,37 @@ $(document).ready(function() {
             } else {
                 adicionarAoCarrinho($(this))
             }
-            
         } else {
             $('#login').click()
         }
     })
 
-    $('.produtos').on('click', '.remover', function () {
-        removerDoCarrinho($(this))
-    })
+    $('#modal-gift').on('show.bs.modal', function () {
+        $('.gift-option-button').on('click', function() {
+            mudarCorBotaoGift(this)
+            buttonToInput(false)
+            tranfereValInputButton()
+        })
 
-    $('.gift-option-button').on('click', function() {
-        mudarCorBotaoGift(this)
-    })
+        $('.personalizado').on('click', function () {
+            buttonToInput(true)
+        })
 
-    $('#modal-gift').on('show.bs.collapse', function() {
-        transpoteDeImagen()
-    })
-
+    }) 
+    
     $('.gift-form').submit(function(e) {
         e.preventDefault()
-        adicionarAoCarrinho($(this), true)
-        resetaFormGift()
+        adicionarAoCarrinho($(this))
+    })
+
+    $('#modal-gift').on('hidden.bs.modal', function () {
+        setTimeout(() => {
+            resetaFormGift()
+        }, 200);
+    })
+
+    $('.produtos').on('click', '.remover', function () {
+        removerDoCarrinho($(this))
     })
 })
 
@@ -88,8 +97,7 @@ function startTimer(dias, horas, minutos, segundos) {
         clearInterval(interval);
         }
     }, 1000); // Executa a cada 1000 ms (1 segundo)
-    }
-
+}
 
 function layoutGridChanger () {
     const larguraTela = $(window).width()
@@ -152,17 +160,27 @@ function sumirComBotaoCarrinho (evento) {
     $('#carrinho-btn').css('display', display)
 }
 
-function adicionarAoCarrinho (btnItemAdd, gift=false) {
+function adicionarAoCarrinho (btnItemAdd) {
     const item = btnItemAdd.parent().parent().parent()
-    
 
     const imagem = item.find('img').attr('src')
-    const precoItemString = gift ? $('.gift-option-button.gift-active-button span').text() : item.find('.dinheiros span').text()
-    console.log(precoItemString)
+    const precoItemString = pegarPreco(item)
     const moldeNovoItem = $(`<li class="produto"><img src="${imagem}" alt=""><h6>R$ <span>${precoItemString}</span></h6><button class="remover"><i class="fas fa-trash"></i></button></li>`)
-    
     moldeNovoItem.appendTo($('.produtos'))
+    console.log(precoItemString)
     atualizaSubTotal(parseFloat(precoItemString.replace(',', '.')))
+}
+
+function pegarPreco (item) {
+    if (item.hasClass('modal-dialog')) {
+        if ($('.gift-active-button').hasClass('personalizado')) {
+            return parseFloat(item.find('.opcoes .gift-active-button #valor-gift').val().replace(',', '.')).toFixed(2)
+        } else {
+            
+            return item.find('.opcoes .gift-active-button span').text()
+        }
+    }
+    return item.find('.dinheiros span').text()
 }
 
 function removerDoCarrinho (btnItemRemov) {
@@ -175,7 +193,6 @@ function removerDoCarrinho (btnItemRemov) {
 
 function atualizaSubTotal (valor) {
     subtotal += valor
-
     $('#sub-total span').text(subtotal.toFixed(2).replace('.', ','))
 }
 
@@ -189,18 +206,6 @@ function mudarCorBotaoGift(qual) {
     const atual = $(qual)
     $('.gift-active-button').removeClass('gift-active-button')
     atual.addClass('gift-active-button')
-
-    let precisaInput = $('#valor-gift').parent().hasClass('gift-active-button') ? true : false
-
-    if (precisaInput)  {
-        buttonToInput(true)
-    } else {
-        buttonToInput(false)
-        let valorGiftString = parseFloat($('#valor-gift').val()).toFixed(2).replace('.', ',')
-        //TEM QUE MELHORAS ESSE NEGOCIO DE SELECIONAR, TA BUGANDO SE SELECIOANR O BOTAO DE POR VALOR PERSONALIZADO E DEPOIS SELECIOANR OUTRO
-        console.log(valorGiftString)
-        $('#outro').html(`R$ <span>${valorGiftString}</span>`)
-    }
 }
 
 function buttonToInput (precisaInput) {
@@ -212,10 +217,24 @@ function buttonToInput (precisaInput) {
     qmAbre.focus()
 }
 
+function tranfereValInputButton() {
+    const valorDinheirosString = parseFloat($('#valor-gift').val())
+    if (valorDinheirosString) {
+        const novoValorElement = $(`<p id="outro" class="no-margin">R$ <span>${valorDinheirosString.toFixed(2).replace('.', ',')}</span></p>`)
+        $('#outro').remove()
+        novoValorElement.appendTo($('.personalizado'))
+    } else {
+        $('#outro').html('Outro')
+        $('#valor-gift').val('')
+    }
+}
+
 function resetaFormGift() {
     $('#valor-gift').val('')
     $('#valor-gift').css('display', 'none')
     $('#outro').css('display', 'block')
     $('.gift-active-button').removeClass('gift-active-button')
     $('.primeiro').addClass('gift-active-button')
+    $('.modal-content.gift img').remove()
+    buttonToInput(false)
 }
