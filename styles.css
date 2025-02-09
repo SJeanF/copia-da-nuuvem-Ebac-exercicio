@@ -450,10 +450,18 @@ section {
     background-color: #07183b;
 }
 
+.card.gift > * {
+    padding: 8px;
+}
+
 .card.gift img {
     width: 200px;
     height: 100px;
     border-radius: 16px;
+}
+
+.card-body {
+    padding: 0;
 }
 
 .card.gift .legenda-produto {
@@ -461,8 +469,23 @@ section {
     background: none;
 }
 
+.card.gift .legenda-produto > * {
+    margin-left: 0;
+}
+
 .card.gift .legenda-produto h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+}
+
+.card.gift .legenda-produto .preco {
+    width: 100%;
+}
+
+.card.gift .legenda-produto .preco button {
+    width: 95%;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
 }
 
 .modal-content.gift {
