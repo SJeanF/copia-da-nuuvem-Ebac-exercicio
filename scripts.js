@@ -35,6 +35,10 @@ $(document).ready(function() {
         }
     })
 
+    $('.adicionar-carrinho.gift').on('click', function () {
+        alterarNomeDoGiftCard($(this))
+    })
+
     $('#modal-gift').on('show.bs.modal', function () {
         $('.gift-option-button').on('click', function() {
             mudarCorBotaoGift(this)
@@ -208,6 +212,12 @@ function transpoteDeImagen(qual) {
     const imgSrc = qual.parent().parent().parent().parent().find('img').attr('src')
     const imgGift = $(`<img src="${imgSrc}" class="d-none">`)
     imgGift.appendTo($('.modal-content.gift'))
+}
+
+function alterarNomeDoGiftCard(qual) {
+    const container = qual.parent().parent()
+    const nome = container.find('h3').text()
+    $('.nome-gift').text(nome)
 }
 
 function mudarCorBotaoGift(qual) {
