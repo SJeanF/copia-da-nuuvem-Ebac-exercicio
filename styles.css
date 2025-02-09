@@ -431,6 +431,10 @@ section {
     background: none;
 }   
 
+.item .legenda-produto > * {
+    margin-left: 5px;
+}
+
 .desconto-limitado {
     font-size: 18px;
     background: linear-gradient(to right, #ff2474, #f26b0b);
