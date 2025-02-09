@@ -28,7 +28,7 @@
                         <li class="nav-item"><a class="nav-link active" href="#ofertas">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#FAQ">Perguntas</a></li>
                     </ul>
                 </nav>
                 <div class="perfil-position">
@@ -66,18 +66,20 @@
             </div>
         </div>
     </div>
+    <button data-bs-toggle="collapse" data-bs-target="#carrinho" id="carrinho-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+    <div class="carrinho-ancora">
     <div class="carrinho-container ">
-        <button data-bs-toggle="collapse" data-bs-target="#carrinho" id="carrinho-btn">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        <div id="carrinho" class="collapse collapse-horizontal">
-            <div class="collapse-content">
-                <button id="fecha-carrinho" data-bs-toggle="collapse" data-bs-target="#carrinho"><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i></button>
-                <div class="carrinho-menu">
-                    <h4>Sub Total</h4>
-                    <h5 id="sub-total">R$ <span>0,00</span></h5>
-                    <ul class="produtos p-0 no-margin">
-                    </ul>
+            <div id="carrinho" class="collapse collapse-horizontal collapse-carrinho">
+                <div class="collapse-content">
+                    <button id="fecha-carrinho" data-bs-toggle="collapse" data-bs-target="#carrinho"><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i></button>
+                    <div class="carrinho-menu">
+                        <h4>Sub Total</h4>
+                        <h5 id="sub-total">R$ <span>0,00</span></h5>
+                        <ul class="produtos p-0 no-margin">
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,9 +92,9 @@
                         <div class="carousel-item active item-grande primeiro">
                             <div class="grid layout-grande">
                                 <div class="destaque-carousel item-pequeno primeiro">
-                                    <img src="https://fakeimg.pl/1280x720" alt="">
+                                    <img src="https://t.ctcdn.com.br/a8UEwVXrjjKDtyToN8SUPCXjUCg=/1200x675/smart/i831855.jpeg" alt="">
                                     <div class="legenda-produto">
-                                        <h3>Promoção Dark Souls</h3>
+                                        <h3>Pre-Venda Gta VI</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
@@ -103,9 +105,9 @@
                                 </div>
                                 <div class="sub-destaque-container-top item-pequeno top">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/400x400" alt="">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/349040/capsule_616x353.jpg?t=1703080866" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Promoção Naruto Storm 4</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -116,9 +118,9 @@
                                 </div>
                                 <div class="sub-destaque-container-bottom item-pequeno bottom">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/320x180" alt="">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1737599097" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Desconto no Spider Man: Miles Morales</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -132,9 +134,9 @@
                         <div class="carousel-item item-grande">
                             <div class="grid layout-grande">
                                 <div class="destaque-carousel item-pequeno">
-                                    <img src="https://fakeimg.pl/1280x720" alt="">
+                                    <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2319/XtqYrG2LWer39eExYBsh9J5x.png" alt="">
                                     <div class="legenda-produto">
-                                        <h3>Rebolei de ladinho</h3>
+                                        <h3>Shadow of The Colossus</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
@@ -145,9 +147,9 @@
                                 </div>
                                 <div class="sub-destaque-container-top item-pequeno top">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/400x400" alt="">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg?t=1719982207" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Melhor Jogo Indie do Planeta</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -158,9 +160,9 @@
                                 </div>
                                 <div class="sub-destaque-container-bottom item-pequeno bottom">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/320x180" alt="">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/405310/header_portuguese.jpg?t=1729802743" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Tô Jogando Esse Aqui Com Meu Priminho</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -174,9 +176,9 @@
                         <div class="carousel-item item-grande">
                             <div class="grid layout-grande">
                                 <div class="destaque-carousel item-pequeno">
-                                    <img src="https://fakeimg.pl/1280x720" alt="">
+                                    <img src="https://image.api.playstation.com/cdn/UP0700/CUSA03388_00/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.png" alt="">
                                     <div class="legenda-produto">
-                                        <h3>Dalva desgraçada</h3>
+                                        <h3>Promoção Dark Souls Trilogy</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus delectus voluptatibus!</p>
                                         <div class="preco">
                                             <span class="desconto">-69%</span>
@@ -187,9 +189,9 @@
                                 </div>
                                 <div class="sub-destaque-container-top item-pequeno top">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/400x400" alt="">
+                                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg?t=1709068852" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Sou Consideravelmente Bom Nesse Aqui</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -200,9 +202,9 @@
                                 </div>
                                 <div class="sub-destaque-container-bottom item-pequeno bottom">
                                     <div class="sub-destaque">
-                                        <img src="https://fakeimg.pl/320x180" alt="">
+                                        <img src="https://play-lh.googleusercontent.com/H-V0z4Fs4yHCLQvrZ6jtBKeBqUZwIL93skVG6CLp9DEX2gu-LqL8WZgrFb02LTjwRiU=w648-h364-rw" alt="">
                                         <div class="legenda-produto">
-                                            <h3>Promoção Dark Souls</h3>
+                                            <h3>Como é Possivel Um Evento De Naruto Nessa Bomba Aqui</h3>
                                             <div class="preco">
                                                 <span class="desconto">-69%</span>
                                                 <h5 class="dinheiros no-margin">R$ <span>317,50</span></h5>
@@ -243,9 +245,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://image.api.playstation.com/cdn/UP1018/CUSA01764_00/daExAVIqaWz8NNeqTaFW2IcweYzqt4d8.png?w=440" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Batman Arkan Kinght</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -263,9 +265,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/1710/UUnpHLJqLAIJX5HioswiPuAm.png" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Devil May Cry 5</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -283,9 +285,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202210/0706/EVWyZD63pahuh95eKloFaJuC.png" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Resident Evil 4 Remake</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -303,9 +305,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://image.api.playstation.com/cdn/UP0001/CUSA04459_00/KVnEezbiQaL59eySNXBB1csp9OyhMyjB.png" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Wath Dogs 2</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -323,9 +325,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://image.api.playstation.com/vulcan/img/rnd/202106/1514/xqoTYwf0S55ro6fwcIIY1KI4.png" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Far Cry 6</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -343,9 +345,9 @@
                                 <p class="no-margin">Por Tempo Limitado <span class="dias">1</span>D:<span class="horas">12</span>H:<span class="minutos">30</span>MIN:<span class="segundos">15</span>S</p>
                             </div>
                             <div class="card-body item">
-                                <img src="https://fakeimg.pl/300x300" alt="">
+                                <img src="https://sm.ign.com/ign_br/game/s/suicide-sq/suicide-squad-kill-the-justice-league_5j5n.jpg" alt="">
                                 <div class="legenda-produto">
-                                    <h3>Nome do Jogo</h3>
+                                    <h3>Esquadrão Suicida</h3>
                                     <div class="preco">
                                         <div class="desconto-limitado">
                                                 <span class="desconto">-69%</span>
@@ -366,7 +368,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="card gift">
                             <div class="card-header gift">
-                                <img src="https://fakeimg.pl/200x100" alt="">
+                                <img src="https://clicr.com.br/wp-content/uploads/2022/09/159501-google-play-store-pega-uma-nova-guia-util-que-mantem-todos-os-seus-aplicativos-que-nao-sao-de-smartphones-em-um-so-lugar.jpg" alt="">
                             </div>
                             <div class="card-body gift">
                                 <div class="legenda-produto">
@@ -381,7 +383,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="card gift">
                             <div class="card-header gift">
-                                <img src="https://fakeimg.pl/200x300" alt="">
+                                <img src="https://sm.ign.com/ign_br/screenshot/default/steam-logo_kk9c.jpg" alt="">
                             </div>
                             <div class="card-body gift">
                                 <div class="legenda-produto">
@@ -396,7 +398,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="card gift">
                             <div class="card-header gift">
-                                <img src="https://fakeimg.pl/300x100" alt="">
+                                <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2022/02/Epic-Games.jpg?ims=408x230/filters:quality(75)" alt="">
                             </div>
                             <div class="card-body gift">
                                 <div class="legenda-produto">
@@ -431,6 +433,47 @@
                 </div>
             </div>
         </div>
+        <section id="FAQ">
+            <div class="container">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordrion-header">
+                            <button data-bs-toggle="collapse" data-bs-target="#pergunta1" class="accordion-button">Pergunta 1</button>
+                        </div>
+                        <div id="pergunta1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sed iusto placeat libero nobis. Odio suscipit, accusamus fugiat et, ipsam esse dolor dignissimos facilis, omnis nemo vitae tempore. Voluptatem, sunt?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordrion-header">
+                            <button data-bs-toggle="collapse" data-bs-target="#pergunta2" class="accordion-button">Pergunta 1</button>
+                        </div>
+                        <div id="pergunta2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sed iusto placeat libero nobis. Odio suscipit, accusamus fugiat et, ipsam esse dolor dignissimos facilis, omnis nemo vitae tempore. Voluptatem, sunt?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordrion-header">
+                            <button data-bs-toggle="collapse" data-bs-target="#pergunta3" class="accordion-button">Pergunta 1</button>
+                        </div>
+                        <div id="pergunta3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sed iusto placeat libero nobis. Odio suscipit, accusamus fugiat et, ipsam esse dolor dignissimos facilis, omnis nemo vitae tempore. Voluptatem, sunt?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                &copy;H2B Store, todos os direitos reservados
+            </div>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

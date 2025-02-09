@@ -1,10 +1,11 @@
 let subtotal = 0 
-let logado = true
+let logado = false
 $(document).ready(function() {
     
     startTimer(sortearNumero(0, 1), sortearNumero(0, 24), sortearNumero(0, 60), sortearNumero(0, 60))
 
     layoutGridChanger()
+    clickAccordions()
     $(window).on('resize', function() {
         layoutGridChanger()
     })
@@ -120,6 +121,13 @@ function layoutGridChanger () {
         $('.item-pequeno.bottom').addClass('sub-destaque-container-bottom')
         $('.apagavel').addClass('d-none')
     }
+}
+
+function clickAccordions() {
+    $('.accordion-button').click()
+    setTimeout(() => {
+        $('.accordion-button').click()
+    }, 400);
 }
 
 function passwordViewToggler(onde) {

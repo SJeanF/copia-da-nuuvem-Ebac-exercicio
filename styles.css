@@ -33,10 +33,6 @@ header {
     z-index: 10;
 }
 
-header .container {
-    position: relative;
-}
-
 .left-head {
     width: 50%;
 }
@@ -82,9 +78,9 @@ section {
 
 .perfil-position {
     position: absolute;
-    top: 50%;
+    top: 38px;
     right: 0;
-    transform: translate(100%, -50%);
+    transform: translate(0, -50%);
 }
 
 .perfil {
@@ -171,7 +167,11 @@ section {
     position: fixed;
     top: 100px;
     right: 0;
-    z-index: 2;
+    z-index: 10;
+}
+
+.carrinho-ancora {
+    position: absolute;
 }
 
 #carrinho-btn {
@@ -181,27 +181,20 @@ section {
     padding: 4px 16px;
     border-radius: 4px;
     font-size: 18px;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 10;
 }
 
 #carrinho-btn:hover {
     color: white;
 }
 
-#carrinho {
-    width: 118px;
-    overflow: hidden;
-}
-
-.collapse-content {
-    width: 100%;
-    height: 100%;
-}
-
 .collapse-content > button {
     width: 100%;
     border: none;
     background: linear-gradient(to right, #83a4e7, #2852a5);
-    width: 118px;
     border-top-left-radius: 8px;
 }
 
@@ -232,7 +225,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     overflow-y: scroll;
     border-bottom: 20px solid transparent;
     height: 65vh;
@@ -272,6 +264,7 @@ section {
     max-width: 100px;
     width: 100%;
     max-height: 100px;
+    border-radius: 8px;
 }
 
 .produto button:hover {
@@ -329,10 +322,19 @@ section {
 }
 
 .legenda-produto{
-    width: calc(100% - 20px);
+    width: calc(100%);
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-end-end-radius: 16px;
+    border-end-start-radius: 16px;
+    padding-bottom: 20px;
+}
+
+.legenda-produto > * {
+    margin-left: 20px;
 }
 
 .legenda-produto h3 {
@@ -406,7 +408,6 @@ section {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 0;
-    padding-bottom: 12px;
 }
 
 .card-body.item h3 {
@@ -421,12 +422,13 @@ section {
 
 .item img {
     width: 100%;
+    height: 300px;
 }
 
 .item .legenda-produto {
     font-size: 8px;
     position: static;
-    margin-left: 20px;
+    background: none;
 }   
 
 .desconto-limitado {
@@ -445,16 +447,18 @@ section {
 .card.gift {
     display: flex;
     flex-direction: row;
-    background-color: #cdd5e6;
+    background-color: #07183b;
 }
 
 .card.gift img {
     width: 200px;
     height: 100px;
+    border-radius: 16px;
 }
 
 .card.gift .legenda-produto {
     position: static;
+    background: none;
 }
 
 .card.gift .legenda-produto h3 {
@@ -523,9 +527,40 @@ section {
     margin: 0;
 }
 
+footer {
+    background-color: #07183b;
+    color: white;
+}
+
+@media screen and (max-width:992px) {
+    .perfil-position {
+        right: 150px;
+        transform: translate(0%, -50%);
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .card.gift > * {
+        padding: 8px;
+    }
+
+    .card.gift img {
+        width: 150px;
+        height: 75px;
+    }
+}
+
 @media screen and (max-width:576px) {
     section {
         padding: 20px 0;
+    }
+
+    .perfil-position {
+        top: 45px;
+        right: 70px;
+        transform: translate(0%, -50%);
     }
     
     .item-pequeno {
@@ -557,15 +592,9 @@ section {
     .item {
         width: 80%;
     }
-}
 
-@media screen and (max-width:992px) {
-    .perfil-position {
-        right: 70px;
-        transform: translate(0%, -50%);
-    }
-
-    .item {
-        width: 100%;
+    .gift-option-button {
+        width: 48%;
     }
 }
+
