@@ -79,7 +79,7 @@ section {
 .perfil-position {
     position: absolute;
     top: 38px;
-    right: 0;
+    right: 10px;
     transform: translate(0, -50%);
 }
 
